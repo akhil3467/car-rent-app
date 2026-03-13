@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+}
+
+/* ================= BANNER =================*/
+
+ .banner {
+  height: 100vh;
+  width: 100%;
+  background: url('/banner2.jpg') center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Dark Overlay */
+.banner::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.5));
+  top: 0;
+  left: 0;
+}
+
+.banner-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+  width: 90%;
+  max-width: 1200px;
+}
+
+.banner-content h1 {
+  font-size: 55px;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.banner {
+  height: 100vh;
+  width: 100%;
+  background: url('/banner2.jpg') center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Dark overlay */
+.banner::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  top: 0;
+  left: 0;
+}
+
+.banner-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* Heading */
+.banner-content h1 {
+  font-size: 55px;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+/* Paragraph */
+.banner {
+  height: 100vh;
+  width: 100%;
+  background: url('/banner2.jpg') center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;   /* 👈 move content to top */
+  padding-top: 120px;        /* 👈 space from top */
+  position: relative;
+}
+
+
+/* Booking Form */
+.booking-form {
+  margin-top: 20px;  /* 👈 space below heading */
+  background: rgba(255,255,255,0.12);
+  padding: 12px;
+  border-radius: 15px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+
+/* Form Layout */
+.form-row {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.form-group {
+  flex: 1;
+  min-width: 160px;
+}
+
+/* Inputs & Select */
+.form-group select,
+.form-group input {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: none;
+  font-size: 14px;
+  outline: none;
+}
+
+/* Button */
+.form-group button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background: #ff3c3c;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.form-group button:hover {
+  background: #e60000;
+  transform: translateY(-2px);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+
+  .banner-content h1 {
+    font-size: 35px;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+
+  .form-group {
+    width: 100%;
+  }
+} 
+
+/* Apply to ALL inputs, selects and button */
+.form-group input,
+.form-group select,
+.form-group button {
+  padding: 12px;
+  border-radius: 10px;
+  border: 2px solid #ccc;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+/* Hover Effect */
+.form-group input:hover,
+.form-group select:hover,
+.form-group button:hover {
+  transform: scale(1.05);
+}
+
+/* Focus Effect (When Clicked) */
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #ff512f;
+  box-shadow: 0 0 8px rgba(255, 81, 47, 0.5);
+  transform: scale(1.05);
+  outline: none;
+}
+
+/* Button Styling */
+.form-group button {
+  background: linear-gradient(135deg, #ff512f, #dd2476);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Button Click Effect */
+.form-group button:active {
+  transform: scale(0.95);
+}
+
+
+/* ===================== */
+/* FORM FIELDS STYLE */
+/* ===================== */
+
+.form-group input,
+.form-group select {
+  padding: 12px 15px;
+  border-radius: 10px;
+  border: 2px solid #ccc;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+/* Hover */
+.form-group input:hover,
+.form-group select:hover {
+  transform: translateY(-3px);
+}
+
+/* Focus Effect */
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #ff512f;
+  box-shadow: 0 0 12px rgba(255, 81, 47, 0.5);
+  outline: none;
+  transform: scale(1.03);
+}
+
+/* ===================== */
+/* PREMIUM BUTTON */
+/* ===================== */
+
+.book-btn {
+  position: relative;
+  background: linear-gradient(135deg, #ff512f, #dd2476);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: 0.4s;
+}
+
+/* Button Hover */
+.book-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Shine Effect */
+.book-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255,255,255,0.3),
+    rgba(255,255,255,0.1),
+    rgba(255,255,255,0.3)
+  );
+  transition: 0.6s;
+}
+
+/* Move Shine */
+.book-btn:hover::before {
+  left: 100%;
+}
+
+/* Click Effect */
+.book-btn:active {
+  transform: scale(0.95);
+}
