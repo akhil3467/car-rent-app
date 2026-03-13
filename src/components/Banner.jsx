@@ -4,6 +4,7 @@ const Banner = () => {
   return (
     <div className="banner">
       <div className="banner-content">
+        <p>Welcome to my Car Rent App</p>
         <h1>Luxury Car on Rent</h1>
         <h5>Book your dream car anytime, anywhere</h5>
 
